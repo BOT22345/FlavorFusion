@@ -1,0 +1,43 @@
+.navbar{
+    padding:20px 0px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.logo{
+    width:40px;
+    height:40px;
+    border-radius:100%;
+}
+
+.assets-search-icon{
+    height:10px;
+    width:10px;
+}
+
+.basketIcon{
+    height:10px;
+    width:10px;
+
+}
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:7px;
+}
+
+.logo-text{
+    height:40px;
+    width:230px;
+}
+
+.navbar-menu{
+    display:flex;
+    list-style: none;
+    gap:20px;
+    color:#49557e;
+    font-size:18px;
+}
