@@ -1,0 +1,8 @@
+.header{
+    height:50vh;
+    width:150vh;
+    margin:30px auto;
+    background: url("../../assets/headerBg2.png");
+    background-size: cover;
+    position:relative;
+}

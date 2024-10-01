@@ -10,9 +10,9 @@ const App = () => {
     <div className="app">
       <Navbar></Navbar>
       <Routes>
-        <Route src="/" element={<Home/>}></Route>
-        <Route src="/cart" element={<Cart/>}></Route>
-        <Route src="/placeorder" element={<PlaceOrder/>}></Route>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/cart" element={<Cart/>}></Route>
+        <Route path="/placeorder" element={<PlaceOrder/>}></Route>
       </Routes>
     </div>
   )
