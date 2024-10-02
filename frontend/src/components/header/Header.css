@@ -6,3 +6,43 @@
     background-size: cover;
     position:relative;
 }
+
+.header-contents{
+    position: absolute;
+    left:10vw;
+    top:4vh;
+    display:flex;
+    flex-direction: column;
+    gap:5vh;
+    animation:fadein 2s;
+}
+.header-contents h2{
+    color:white;
+    font-size:50px;
+}
+
+.header-contents p{
+    width:43vw;
+
+    color:white;
+    font-size:20px;
+}
+
+.header-contents button{
+    width:100px;
+    height:40px;
+    border-radius: 20px;
+    border:2px solid white;
+    background: transparent;
+    font-size:15px;
+    color:white;
+}
+
+@keyframes fadein{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
