@@ -3,6 +3,7 @@ import logo from "./logo.jpeg";
 import searchIcon from "./searchIcon.png";
 import basketIcon from "./basketIcon.png";
 import logoText from "./logoText.jpg";
+import rating_stars from "./food_item_rating.jpg";
 
 //menu item images
 import menu1 from "./menu-1.jpg";
@@ -16,11 +17,13 @@ import food2 from "./food_2.jpg"
 import food3 from "./food_3.jpg"
 import food4 from "./food_4.jpg"
 
+
 export const assets={  
     logo:logo,
     searchIcon:searchIcon,
     basketIcon:basketIcon,
-    logoText:logoText
+    logoText:logoText,
+    rating_stars:rating_stars
 }
 
 export const menu_item=[
