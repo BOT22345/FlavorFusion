@@ -4,6 +4,9 @@ import searchIcon from "./searchIcon.png";
 import basketIcon from "./basketIcon.png";
 import logoText from "./logoText.jpg";
 import rating_stars from "./food_item_rating.jpg";
+import plussign from "./PlusSign.png";
+import coloredPlus from "./coloredPlus.jpg";
+import coloredSub from "./coloredSub.jpg";
 
 //menu item images
 import menu1 from "./menu-1.jpg";
@@ -24,7 +27,10 @@ export const assets={
     searchIcon:searchIcon,
     basketIcon:basketIcon,
     logoText:logoText,
-    rating_stars:rating_stars
+    rating_stars:rating_stars,
+    plussign:plussign,
+    coloredPlus:coloredPlus,
+    coloredSub:coloredSub
 }
 
 export const menu_item=[

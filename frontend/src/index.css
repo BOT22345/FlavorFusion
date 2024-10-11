@@ -5,9 +5,11 @@
     box-sizing:border-box;
     font-family: Outfit;
     /* background-color: azure; */
+    /* color: white; */
   }
   
   body{
+    /* background: rgb(17, 16, 16); */
     min-height:100vh;
   }
   

@@ -17,6 +17,7 @@
     object-fit: cover;
 }
 
+
 .food-item-name{
     display: flex;
     flex-direction: row;
@@ -44,6 +45,28 @@
     margin: 10px 0;
 }
 
+.plusSign-container{
+    height:50px;
+    width:50px;
+    border:2px solid black;
+    cursor: pointer;
+}
+
+.food-counter-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:40px;
+}
+.food-counter-container img{
+    height: 50px;
+    width: 50px;
+    border:none;
+}
+.food-counter-container p{
+    font-size:20px;
+}
 
 @keyframes fadein{
     0%{
