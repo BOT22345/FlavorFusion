@@ -1,10 +1,11 @@
 import "./FoodItem.css"
 import {assets} from "../../assets/assets.js";
-import { useState } from "react";
+import { useContext } from "react";
+import { StoreContext } from "../../context/StoreContext.jsx";
 
 
 const FoodItem = ({id,name,price,description,image}) => {
-  const [itemCount,setItemCount]=useState(0);
+  const {cartItem,addProduct,removeProduct}=useContext(StoreContext);
   return (
     <div className="food-item">
         <div className="food-item-image-Container">
@@ -17,12 +18,12 @@ const FoodItem = ({id,name,price,description,image}) => {
             </div>
             <div className="food-item-description">{description}</div>
             <div className="food-item-price">Rs {price}</div>
-            {!itemCount
-              ?<img className="plusSign-container" onClick={()=>{return setItemCount((prev)=>{return prev+1})}} src={assets.plussign}></img>
+            {!cartItem[id]
+              ?<img className="plusSign-container" onClick={()=>{return addProduct(id)}} src={assets.plussign}></img>
               :<div className="food-counter-container">
-                <img className="plusSign-container" onClick={()=>{return setItemCount((prev)=>{return prev+1})}} src={assets.coloredPlus}></img>
-                <p>{itemCount}</p>
-                <img className="plusSign-container" onClick={()=>{return setItemCount((prev)=>{return prev-1})}} src={assets.coloredSub}></img>
+                <img className="plusSign-container" onClick={()=>{return addProduct(id)}} src={assets.coloredPlus}></img>
+                <p>{cartItem[id]}</p>
+                <img className="plusSign-container" onClick={()=>{return removeProduct(id)}} src={assets.coloredSub}></img>
               </div>
             }
         </div>
