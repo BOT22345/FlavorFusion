@@ -7,6 +7,9 @@ import rating_stars from "./food_item_rating.jpg";
 import plussign from "./PlusSign.png";
 import coloredPlus from "./coloredPlus.jpg";
 import coloredSub from "./coloredSub.jpg";
+import facebook_icon from "./facebook_icon.jpg";
+import email_icon from "./email_icon.jpg";
+import linkedin_icon from "./linkedin_icon.jpg";
 
 //menu item images
 import menu1 from "./menu-1.jpg";
@@ -30,7 +33,10 @@ export const assets={
     rating_stars:rating_stars,
     plussign:plussign,
     coloredPlus:coloredPlus,
-    coloredSub:coloredSub
+    coloredSub:coloredSub,
+    facebook_icon:facebook_icon,
+    email_icon:email_icon,
+    linkedin_icon:linkedin_icon
 }
 
 export const menu_item=[
