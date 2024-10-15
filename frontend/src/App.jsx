@@ -4,9 +4,10 @@ import Home from "./pages/home/Home";
 import Cart from "./pages/cart/Cart";
 import PlaceOrder from "./pages/placeorder/PlaceOrder";
 import "./App.css";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
-  return (
+  return (<>
     <div className="app">
       <Navbar></Navbar>
       <Routes>
@@ -15,6 +16,8 @@ const App = () => {
         <Route path="/placeorder" element={<PlaceOrder/>}></Route>
       </Routes>
     </div>
+      <Footer></Footer>
+  </>
   )
 }
 
