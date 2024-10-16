@@ -1,16 +1,19 @@
 import { assets } from "../../assets/assets"
-
+import "./Footer.css"
 const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-content">
         <div className="footer-left">
-          <img src={assets.logo}></img>
+        <div className="logoContainer">
+          <img className="logo" src={assets.logo}></img>
+          <img src={assets.logoText} className="logo-text"></img>
+        </div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo soluta at tempora excepturi dignissimos quae architecto ipsam! Illum, nostrum quibusdam.</p>
-          <div className="socia-media-icons">
-            <img src={assets.facebook_icon}></img>
-            <img src={assets.email_icon}></img>
-            <img src={assets.linkedin_icon}></img>
+          <div className="social-media-icons">
+            <img className="social-media-icon" src={assets.facebook_icon}></img>
+            <img className="social-media-icon" src={assets.email_icon}></img>
+            <img className="social-media-icon" src={assets.linkedin_icon}></img>
           </div>
         </div>
         <div className="footer-center">
