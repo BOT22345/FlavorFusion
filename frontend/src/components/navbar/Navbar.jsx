@@ -2,7 +2,7 @@ import "./Navbar.css"
 import {assets} from "../../assets/assets.js"
 import { useState } from "react"
 
-export const Navbar = () => {
+export const Navbar = ({setShowLogin}) => {
   const [menu,setMenu]=useState("home");
   return (
     <div className="navbar">
