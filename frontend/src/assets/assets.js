@@ -10,6 +10,7 @@ import coloredSub from "./coloredSub.jpg";
 import facebook_icon from "./facebook_icon.jpg";
 import email_icon from "./email_icon.jpg";
 import linkedin_icon from "./linkedin_icon.jpg";
+import crossImage_icon from "./crossImage.png";
 
 //menu item images
 import menu1 from "./menu-1.jpg";
@@ -36,7 +37,8 @@ export const assets={
     coloredSub:coloredSub,
     facebook_icon:facebook_icon,
     email_icon:email_icon,
-    linkedin_icon:linkedin_icon
+    linkedin_icon:linkedin_icon,
+    crossImage_icon:crossImage_icon
 }
 
 export const menu_item=[
