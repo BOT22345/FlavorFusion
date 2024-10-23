@@ -11,6 +11,7 @@ import facebook_icon from "./facebook_icon.jpg";
 import email_icon from "./email_icon.jpg";
 import linkedin_icon from "./linkedin_icon.jpg";
 import crossImage_icon from "./crossImage.png";
+import login_popup_bg from "./loginPopupBg.jpg"
 
 //menu item images
 import menu1 from "./menu-1.jpg";
@@ -38,7 +39,8 @@ export const assets={
     facebook_icon:facebook_icon,
     email_icon:email_icon,
     linkedin_icon:linkedin_icon,
-    crossImage_icon:crossImage_icon
+    crossImage_icon:crossImage_icon,
+    login_popup_bg:login_popup_bg
 }
 
 export const menu_item=[
