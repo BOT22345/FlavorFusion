@@ -19,7 +19,7 @@ const LoginPopup = ({setShowLogin}) => {
             <input type="email" placeholder="Your email" required></input>
             <input type="password" placeholder="Your password" required></input>
           </div>
-          <button>{currentState==="Sign-Up"?"Create Account":"Login"}</button>
+          <button className="login-button">{currentState==="Sign-Up"?"Sign-Up":"Login"}</button>
           {
             currentState==="Login"?
             <p>Create a new account? <span onClick={()=>{setCurrentState("Sign-Up")}}>Click here</span></p>
