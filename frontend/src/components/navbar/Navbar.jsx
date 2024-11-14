@@ -17,9 +17,9 @@ export const Navbar = ({setShowLogin}) => {
         </Link>
         <ul className="navbar-menu">
           <li className={menu==="home"?"active":""} onClick={()=>{setMenu("home")}}><Link to="/">Home</Link></li>
-          <li className={menu==="menu"?"active":""} onClick={()=>{setMenu("menu")}}>Menu</li>
-          <li className={menu==="mobile-app"?"active":""} onClick={()=>{setMenu("mobile-app")}}>Mobile-App</li>
-          <li className={menu==="contact-us"?"active":""} onClick={()=>{setMenu("contact-us")}}>Contact Us</li>
+          <a href="#explore-menu" className={menu==="menu"?"active":""} onClick={()=>{setMenu("menu")}}>Menu</a>
+          <a href="#footer" className={menu==="mobile-app"?"active":""} onClick={()=>{setMenu("mobile-app")}}>Mobile-App</a>
+          <a href="#footer" className={menu==="contact-us"?"active":""} onClick={()=>{setMenu("contact-us")}}>Contact Us</a>
         </ul>
         <div className="navbar-right">
           <img src={assets.searchIcon} className="assets-search-icon"></img>
