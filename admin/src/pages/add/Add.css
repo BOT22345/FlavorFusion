@@ -13,7 +13,6 @@
 .add-img-upload img{
     width:120px;
     height:50px;
-    object-fit: cover;
     padding: 0;
 }
 
