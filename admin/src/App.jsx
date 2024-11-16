@@ -7,6 +7,7 @@ import List from "./pages/list/List";
 import Orders from "./pages/orders/Order"
 
 const App = () => {
+  const url="http://localhost:4000";
   return (
     <div>
       <Navbar></Navbar>
@@ -14,9 +15,9 @@ const App = () => {
       <div className='app-content'>
         <Sidebar></Sidebar>
         <Routes>
-          <Route path="/add" element={<Add></Add>}></Route>
-          <Route path="/list" element={<List></List>}></Route>
-          <Route path="/orders" element={<Orders></Orders>}></Route>
+          <Route path="/add" element={<Add url={url}></Add>}></Route>
+          <Route path="/list" element={<List url={url}></List>}></Route>
+          <Route path="/orders" element={<Orders url={url}></Orders>}></Route>
         </Routes>
       </div>
     </div>

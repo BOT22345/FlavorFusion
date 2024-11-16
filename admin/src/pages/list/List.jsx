@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import "./List.css";
 import axios from "axios";
-const List = () => {
-  const url="http://localhost:4000";
+const List = ({url}) => {
   const [list,setList]=useState([]);
   const fetchList=async ()=>{
     const response=await axios.get(`${url}/api/food/list`);
@@ -13,6 +12,15 @@ const List = () => {
     }
     else{
       alert("list fetch error");
+    }
+  }
+  const removeFood=async (foodId)=>{
+    const response =await axios.post(`${url}/api/food/remove`,{id:foodId});
+    await fetchList();
+    if(response.data.success){
+      alert("item removed");
+    }else{
+      alert("item remove api error");
     }
   }
   useEffect(()=>{fetchList()},[]);
@@ -34,7 +42,7 @@ const List = () => {
                 <p>{item.name}</p>
                 <p>{item.category}</p>
                 <p>{item.price}</p>
-                <p>X</p>
+                <p onClick={()=>{removeFood(item._id)}}className="cursor">X</p>
             </div>
           )
         })}
