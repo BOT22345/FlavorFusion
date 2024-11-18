@@ -11,7 +11,10 @@ import facebook_icon from "./facebook_icon.jpg";
 import email_icon from "./email_icon.jpg";
 import linkedin_icon from "./linkedin_icon.jpg";
 import crossImage_icon from "./crossImage.png";
-import login_popup_bg from "./loginPopupBg.jpg"
+import login_popup_bg from "./loginPopupBg.jpg";
+import adminProfile from "./adminprofile.jpg";
+import orders from "./orders.png";
+import logout from "./logout.jpg";
 
 //menu item images
 import menu1 from "./menu-1.jpg";
@@ -40,7 +43,10 @@ export const assets={
     email_icon:email_icon,
     linkedin_icon:linkedin_icon,
     crossImage_icon:crossImage_icon,
-    login_popup_bg:login_popup_bg
+    login_popup_bg:login_popup_bg,
+    adminProfile:adminProfile,
+    orders:orders,
+    logout:logout
 }
 
 export const menu_item=[

@@ -1,7 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import "./LoginPopup.css";
 import {assets} from "../../assets/assets.js";
+import { StoreContext } from "../../context/StoreContext.jsx";
+import axios from "axios";
 const LoginPopup = ({setShowLogin}) => {
+
+  const {url,setToken}=useContext(StoreContext);
+
   const [currentState,setCurrentState]=useState("Sign-Up");
   const [data,setData]=useState({
     name:"",
@@ -15,12 +20,31 @@ const LoginPopup = ({setShowLogin}) => {
     setData(data=>({...data,[name]:value}));
   }
 
-  useEffect(()=>{
-    console.log(data);
-  },[data])
+  const onLogin=async (event)=>{
+    event.preventDefault();
+    let newUrl=url;
+    if(currentState==="Login"){
+      newUrl+="/api/user/login";
+    }
+    else{
+      newUrl +="/api/user/register";
+    }
+
+    const response= await axios.post(newUrl,data);
+
+    if(response.data.success){
+      setToken(response.data.token);
+      localStorage.setItem("token",response.data.token);
+    }
+    else{
+      alert(response.data.message);
+    }
+  }
+
+
   return (
     <div className="login-popup">
-        <form className="login-popup-container">
+        <form onSubmit={onLogin} className="login-popup-container">
           <div className="login-popup-title">
             <h2>{currentState}</h2>
           </div>
@@ -34,7 +58,7 @@ const LoginPopup = ({setShowLogin}) => {
             <input type="email" name="email" onChange={onChangeHandler} value={data.email} placeholder="Your email" required></input>
             <input type="password" name="password" onChange={onChangeHandler} value={data.password} placeholder="Your password" required></input>
           </div>
-          <button className="login-button">{currentState==="Sign-Up"?"Sign-Up":"Login"}</button>
+          <button type="submit" className="login-button">{currentState==="Sign-Up"?"Sign-Up":"Login"}</button>
           {
             currentState==="Login"?
             <p>Create a new account? <span onClick={()=>{setCurrentState("Sign-Up")}}>Click here</span></p>
